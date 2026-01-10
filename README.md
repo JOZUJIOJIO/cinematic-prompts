@@ -4,7 +4,7 @@
 
 **专业的电影级 AI 提示词生成器 | Professional Cinematic AI Prompt Generator**
 
-[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/yourusername/cinematic-prompts)
+[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/JOZUJIOJIO/cinematic-prompts)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-purple.svg)](https://claude.ai/claude-code)
 
@@ -37,7 +37,7 @@
 #### 1. 克隆仓库
 
 ```bash
-git clone https://github.com/yourusername/cinematic-prompts.git
+git clone https://github.com/JOZUJIOJIO/cinematic-prompts.git
 cd cinematic-prompts
 ```
 
@@ -171,7 +171,7 @@ A professional Claude Code SKILL for generating cinematic-quality AI prompts. Tr
 #### 1. Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/cinematic-prompts.git
+git clone https://github.com/JOZUJIOJIO/cinematic-prompts.git
 cd cinematic-prompts
 ```
 
@@ -228,6 +228,6 @@ This project is licensed under the [MIT License](./LICENSE)
 
 **Made with ❤️ by the community**
 
-[Report Bug](https://github.com/yourusername/cinematic-prompts/issues) · [Request Feature](https://github.com/yourusername/cinematic-prompts/issues)
+[Report Bug](https://github.com/JOZUJIOJIO/cinematic-prompts/issues) · [Request Feature](https://github.com/JOZUJIOJIO/cinematic-prompts/issues)
 
 </div>
