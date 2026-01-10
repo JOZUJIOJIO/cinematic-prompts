@@ -1,0 +1,7 @@
+{
+  "skills": {
+    "cinematic-prompts": {
+      "path": "./skills/cinematic-prompts"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "cinematic-prompts",
+  "description": "根据用户需求生成电影感系列提示词,包含精准的画面描述和镜头运动,最终输出为MD文档",
+  "version": "1.0.0",
+  "author": "Claude",
+  "prompt": "prompts/main.md"
+}
