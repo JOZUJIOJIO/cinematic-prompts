@@ -164,5 +164,65 @@ If these examples helped you, or if you have suggestions:
 
 ---
 
+### 2. 我的月球生活 | My Life on the Moon
+
+**文件**: [narrative/我的月球生活_分镜脚本.md](./narrative/我的月球生活_分镜脚本.md)
+
+**描述 | Description**:
+- 🌙 科幻题材,月球基地生活场景
+- 📹 8个镜头,展现孤独、工作、希望的完整叙事
+- 🎨 冷色调为主,太空科幻风格
+- 🔄 叙事分镜模式示例
+
+**技术亮点 | Technical Highlights**:
+- ✅ 完整的DNA模板系统
+- ✅ 跨场景叙事连贯性
+- ✅ 科幻场景专业术语
+- ✅ 情感氛围渐进式展现
+
+**适用工具 | Recommended Tools**:
+- **图片生成**: Midjourney, Stable Diffusion
+- **图转视频**: Runway, Pika Labs
+
+**预计时长**: 40-50秒
+
+---
+
+### 3. 咖啡厅对话 | Coffee Shop Dialogue
+
+**文件**: [single-scene/咖啡厅对话_9景别_v1.0.0.md](./single-scene/咖啡厅对话_9景别_v1.0.0.md)
+
+**描述 | Description**:
+- ☕ 现代咖啡厅对话场景
+- 📹 9种标准景别全覆盖 (WS/MS/MCU/CU/ECU/OTS/POV)
+- 🎨 温暖色调,王家卫风格
+- 🔄 单场景多视角模式示例（v2.1新功能）
+
+**技术亮点 | Technical Highlights**:
+- ✅ 9张独立图片输出
+- ✅ 专业景别命名和技术参数
+- ✅ 100%场景一致性控制
+- ✅ 完整批量生成工作流
+
+**镜头列表 | Shot List**:
+1. WS - 建立场景
+2. MS - 双人互动
+3. OTS - 主角视角
+4. OTS Reverse - 反向过肩
+5. MCU A - 主角说话
+6. MCU B - 主角倾听
+7. CU - 情感高潮
+8. ECU - 细节特写
+9. POV - 主观镜头
+
+**适用工具 | Recommended Tools**:
+- **图片生成**: Midjourney --cref, Stable Diffusion (固定seed), ComfyUI
+- **图转视频**: Runway, Pika Labs
+
+**预计时长**: 33秒
+
+---
+
 **最后更新 | Last Updated**: 2026-01-10
-**示例数量 | Example Count**: 1
+**示例数量 | Example Count**: 3
+**包含工作模式 | Modes Covered**: 叙事分镜模式 + 单场景多视角模式
