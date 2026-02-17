@@ -1,12 +1,13 @@
-# 🎬 Cinematic Prompts Generator
+# 🎬 Seedance Cinematic Video — AI视频提示词引擎
 
 <div align="center">
 
-**专业的电影级 AI 提示词生成器 v3.0 | Professional Cinematic AI Prompt Generator**
+**即梦2.0 (Seedance 2.0) 电影级视频提示词生成器**
 
-[![Version](https://img.shields.io/badge/version-3.0.0-blue.svg)](https://github.com/JOZUJIOJIO/cinematic-prompts)
+[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/JOZUJIOJIO/cinematic-prompts)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](./LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-purple.svg)](https://claude.ai/claude-code)
+[![Platform](https://img.shields.io/badge/Platform-即梦2.0%20%7C%20Seedance%202.0-orange.svg)](https://jimeng.jianying.com)
 
 [English](#english) | [中文](#中文)
 
@@ -18,24 +19,22 @@
 
 ### 📖 简介
 
-这是一个专业的 Claude Code SKILL，用于生成电影级别的 AI 提示词系列。v3.0 采用全新的三层提示词架构，基于时长自动计算画面数量，智能选择最佳镜头类型，为每个画面生成完整的视频制作参数。
+专为**即梦 2.0 (Seedance 2.0)** 设计的 Claude Code SKILL，从故事/剧本到可直接粘贴的电影级提示词，一键完成。
 
-**v3.0 核心创新**：
-- **时长驱动工作流**：输入期望时长，自动计算画面数量（每画面5秒）
-- **三层提示词架构**：画面提示词 → 镜头提示词 → 视频转换提示词
-- **智能自动选镜**：基于叙事节奏、内容匹配、视觉多样性、情绪强度四大规则
-- **12种运镜库 + 10种过渡效果**：专业电影语言库，智能匹配
+**核心原则：**
+- 🎭 **角色即变量** — 每个角色注册为 `@图片N` 槽位，保持多镜头一致性
+- ⏱️ **4-15秒硬约束** — 严格遵守即梦2.0平台限制，智能分配每镜头时长
+- 🎵 **音画原生同步** — 口型同步、环境音效、BGM 全部写入提示词
+- 📋 **素材准备清单** — 自动生成需要上传的参考图/音频列表
 
 ### ✨ 功能特点
 
-- ⏱️ **时长驱动** - 输入视频时长，自动计算最优画面数量
-- 🎯 **三层提示词** - 画面提示词(JSON) + 镜头提示词(7种景别) + 视频转换提示词
-- 🤖 **智能选镜** - AI自动选择最合适的景别，并输出详细理由
-- 🎥 **7种标准景别** - EWS/LS/MLS/MS/MCU/CU/ECU，每种包含完整技术参数
-- 📹 **12种专业运镜** - Static/Pan/Tilt/Dolly/Tracking/Orbit/Drone等，含速度和情绪定义
-- 🎞️ **10种过渡效果** - Cut/Fade/Dissolve/Match Cut/Jump Cut等，含时长和情绪匹配
-- 🎵 **BGM智能匹配** - 10种氛围分类，自动推荐音乐类型和作曲家参考
-- 🎨 **好莱坞标准** - 专业导演级场景描述和电影叙事规则
+- 🎭 **@槽位系统** — 角色/场景/道具/音频全部注册为变量（最多9图+3视频+3音频）
+- ⏱️ **智能时长判定** — 基于角色数/动作复杂度/运镜幅度/对白时长综合计算
+- 🎬 **六层提示词结构** — 角色层+场景层+镜头层+光影层+音频层+约束层
+- 🎵 **音频层** — 口型同步、环境音效、BGM写入提示词
+- 📋 **素材准备清单** — 每个分镜附带完整的素材槽位说明和用户操作指引
+- ✅ **质量检查清单** — 结构/提示词/输出三层自动验证
 
 ### 🚀 快速开始
 
@@ -49,148 +48,84 @@ cd cinematic-prompts
 #### 2. 在 Claude Code 中使用
 
 ```bash
-# 确保在项目目录中
-pwd  # 应显示 .../cinematic-prompts
-
-# 调用 SKILL
-/skill cinematic-prompts
+/skill seedance-cinematic-video
 ```
 
 #### 3. 开始创作
 
-告诉 SKILL 你的需求，例如：
-- "我想制作一个60秒的科幻短片，讲述宇航员在月球基地的一天"
-- "帮我生成一个30秒的浪漫求婚场景视频脚本"
-- "制作一个90秒的动作追逐场景分镜"
+告诉 SKILL 你的场景，例如：
+
+```
+帮我生成《让子弹飞》火车上提字诗场景的即梦2.0分镜提示词
+主角：马邦德（圆脸，西装）、县长夫人（旗袍）
+场景：火车餐车厢，民国风格
+```
 
 SKILL 会自动：
-1. 计算画面数量（60秒 ÷ 5秒 = 12个画面）
-2. 逐画面生成完整的三层提示词
-3. 自动选择最合适的镜头景别
-4. 为每个画面配置运镜、过渡、BGM建议
+1. 注册角色表（每个角色 = `@图片N` 槽位）
+2. 生成素材准备清单
+3. 智能拆分镜头并判定时长（4-15秒）
+4. 逐镜头生成六层提示词（含口型同步音频层）
+5. 输出每个镜头的用户操作指引
+
+### 📏 平台约束（即梦2.0）
+
+| 约束 | 值 |
+|------|-----|
+| 单镜头时长 | **4-15秒**（硬上限） |
+| 图片参考上限 | 9张 |
+| 视频参考上限 | 3段，总时长≤15秒 |
+| 音频参考上限 | 3段，总时长≤15秒 |
+| 混合上传总上限 | 12个文件 |
 
 ### 📂 项目结构
 
 ```
 cinematic-prompts/
-├── .clauderc                    # Claude Code 配置
-├── .gitignore                   # Git 忽略文件
-├── LICENSE                      # MIT 许可证
-├── README.md                    # 本文件
-├── CHANGELOG.md                 # 版本更新日志
+├── LICENSE
+├── README.md
 ├── skills/
-│   └── cinematic-prompts/
-│       ├── skill.json          # SKILL 定义
+│   └── seedance-cinematic-video/
+│       ├── skill.json          # SKILL 元信息
 │       └── prompts/
-│           └── main.md         # 核心提示词模板
+│           └── main.md         # 核心提示词引擎（六层结构）
 └── examples/
-    ├── 浪漫日落场景_分镜脚本_v2.md    # 示例输出
-    └── README.md               # 示例说明
+    ├── README.md
+    └── narrative/
+        └── 让子弹飞_提字诗场景_Seedance2.0.md   # 完整示例
 ```
 
-### 🎯 v3.0 工作流程
+### 🎯 工作流程
 
 ```
-用户输入：剧本 + 期望时长(秒)
+用户输入：故事/剧本/场景描述
     ↓
-自动计算：画面数 = 时长 ÷ 5秒
+Step 1: 剧本分析 → 角色表 + 场景表 + 道具表
     ↓
-用户确认：画面数量
+Step 2: 素材槽位注册 → @图片N / @视频N / @音频N
     ↓
-FOR 每个画面 (1 到 N):
-    ├─ 步骤1: 生成画面提示词 (JSON格式，好莱坞标准)
-    ├─ 步骤2: 生成7种镜头提示词 (基于画面提示词+景别模板)
-    ├─ 步骤3: AI自动选择最合适镜头 (输出选择理由)
-    └─ 步骤4: 生成视频转换提示词 (运镜+过渡+BGM)
+Step 3: 智能分镜 → 拆镜头 + 时长判定（4-15s）
     ↓
-输出完整Markdown分镜脚本
+Step 4: 逐镜头六层提示词
+    ↓
+Step 5: 输出提示词 + 素材清单 + 用户操作指引
 ```
 
-### 📦 三层提示词架构
+### 📋 六层提示词结构
 
-#### 1️⃣ 画面提示词 (Scene Prompt)
-**JSON格式，包含**：
-- 场景描述（环境、角色、动作）
-- 光线设置（类型、方向、强度、色温）
-- 色彩基调（主色调、对比度、饱和度）
-- 氛围情绪（整体感觉、情感基调）
-- Scene DNA（人物/环境/风格固定特征，权重1.3-1.5）
+```
+[角色层] @图片N 的角色[具体动作]，[表情]，[姿态]
+[场景层] 在 @图片K 的场景中，[环境细节]，[时间天气]
+[镜头层] [景别]，镜头[运镜方式+速度+方向]
+[光影层] [光线类型]，[色调]，[氛围风格]
+[音频层] [环境音效]。角色说出 @音频N 的对白，口型同步。[配乐]
+[约束层] 画面流畅稳定，面部清晰不变形，保持@图片N角色一致性，8K超高清，电影级质感
+```
 
-#### 2️⃣ 镜头提示词 (Shot Prompt)
-**动态生成7种景别**：
-1. EWS (远景) - 14-24mm, f/8-f/11
-2. LS (全景) - 24-35mm, f/5.6-f/8
-3. MLS (中远景) - 35-50mm, f/4-f/5.6
-4. MS (中景) - 50mm, f/4
-5. MCU (中近景) - 50-85mm, f/2.8-f/4
-6. CU (近景) - 85-100mm, f/1.4-f/2.8
-7. ECU (特写) - 100mm+ Macro, f/2.0-f/2.8
+### 💡 示例
 
-#### 3️⃣ 视频转换提示词 (Video Prompt)
-**包含**：
-- 选中的镜头提示词（完整内容）
-- 运镜方式（12种标准运镜库智能选择）
-- 过渡效果（10种过渡效果库智能匹配）
-- BGM建议（10种氛围分类自动匹配）
-- 完整技术参数（焦距/光圈/帧率/画幅）
-
-### 🛠️ 适用工具
-
-**图片生成**：
-- Midjourney v6
-- DALL-E 3
-- Stable Diffusion XL
-
-**图转视频**：
-- Runway Gen-2/Gen-3
-- Pika Labs 1.5
-- Stability AI SVD
-
-### 💡 v3.0 新特性详解
-
-#### 🤖 智能自动选镜系统
-基于四大规则自动选择最佳景别：
-1. **叙事节奏**：开场用远景，高潮用近景/特写，结尾回到远景
-2. **内容匹配**：环境为主用EWS/LS，对话用MS/MCU，情绪用CU/ECU
-3. **视觉多样性**：避免连续重复，创造推拉节奏（LS→MS→CU→MS→LS）
-4. **情绪强度**：平静用MS/LS，紧张用MCU/CU，爆发用CU/ECU
-
-#### 📹 12种专业运镜库
-- **基础运镜**：Static, Pan, Tilt, Dolly, Truck, Crane
-- **高级运镜**：Tracking, Orbit, Dolly Zoom, Handheld, Drone, POV Walking
-- 每种运镜包含：速度参数(0.3x/0.5x/1.0x)、情绪定义、适用场景
-
-#### 🎞️ 10种过渡效果库
-- **基础过渡**：Cut, Fade In/Out, Dissolve, Fade to White, Wipe
-- **高级过渡**：Match Cut, Jump Cut, L Cut/J Cut, Defocus, Morph
-- 每种过渡包含：时长规范、适用场景、情绪匹配
-
-#### 🎵 BGM智能匹配系统
-10种氛围自动匹配音乐类型：
-- 史诗/壮观 → Hans Zimmer风格管弦乐
-- 浪漫/温馨 → Yiruma风格钢琴
-- 悬疑/紧张 → Trent Reznor风格电子音效
-- 科幻/未来 → Vangelis风格合成器
-- (更多详见文档)
-
-### 💡 使用示例
-
-查看 `examples/` 目录获取完整示例：
-- [v2.0 浪漫日落场景分镜脚本](./examples/浪漫日落场景_分镜脚本_v2.md)
-- v3.0 示例即将更新
-
-### 🤝 贡献
-
-欢迎提交 Issue 和 Pull Request！
-
-### 📄 许可证
-
-本项目采用 [MIT 许可证](./LICENSE)
-
-### 🙏 致谢
-
-- 基于 [Claude Code](https://claude.ai/claude-code) 构建
-- 感谢所有贡献者
+查看 `examples/` 目录：
+- [《让子弹飞》提字诗场景完整分镜（6镜头）](./examples/narrative/让子弹飞_提字诗场景_Seedance2.0.md)
 
 ---
 
@@ -198,92 +133,52 @@ FOR 每个画面 (1 到 N):
 
 ### 📖 Introduction
 
-A professional Claude Code SKILL for generating cinematic-quality AI prompts. v3.0 introduces a revolutionary three-layer prompt architecture with duration-based scene calculation and intelligent shot selection.
+A Claude Code SKILL designed specifically for **Seedance 2.0 (即梦 2.0)** by ByteDance. Turns stories/scripts into cinematic-quality prompts ready to paste into the platform.
 
-**v3.0 Key Innovations**:
-- **Duration-Driven Workflow**: Input desired duration, auto-calculate scene count (5 sec/scene)
-- **Three-Layer Prompt Architecture**: Scene Prompt → Shot Prompt → Video Prompt
-- **Intelligent Auto-Selection**: AI chooses optimal shot types based on 4 narrative rules
-- **12 Camera Movements + 10 Transitions**: Professional film language library
-
-### ✨ Features
-
-- ⏱️ **Duration-Driven** - Input video duration, auto-calculate optimal scene count
-- 🎯 **Three-Layer Prompts** - Scene(JSON) + Shot(7 types) + Video(final)
-- 🤖 **Smart Selection** - AI auto-selects best shot type with reasoning
-- 🎥 **7 Standard Shots** - EWS/LS/MLS/MS/MCU/CU/ECU with complete specs
-- 📹 **12 Pro Movements** - Static/Pan/Tilt/Dolly/Tracking/Orbit/Drone with speed & emotion
-- 🎞️ **10 Transitions** - Cut/Fade/Dissolve/Match Cut/Jump Cut with timing & mood
-- 🎵 **BGM Matching** - 10 mood categories with composer references
-- 🎨 **Hollywood Standard** - Professional director-level scene descriptions
+**Core principles:**
+- 🎭 **Characters as variables** — Each character registered as `@imageN` slot for multi-shot consistency
+- ⏱️ **4-15 second hard constraint** — Strictly follows Seedance 2.0 platform limits with intelligent duration allocation
+- 🎵 **Native audio-video sync** — Lip sync, ambient sounds, BGM all written into prompts
+- 📋 **Asset checklist** — Auto-generates list of reference images/audio to upload
 
 ### 🚀 Quick Start
-
-#### 1. Clone Repository
 
 ```bash
 git clone https://github.com/JOZUJIOJIO/cinematic-prompts.git
 cd cinematic-prompts
 ```
 
-#### 2. Use in Claude Code
-
 ```bash
-# Make sure you're in the project directory
-pwd  # Should show .../cinematic-prompts
-
-# Invoke the SKILL
-/skill cinematic-prompts
+/skill seedance-cinematic-video
 ```
 
-#### 3. Start Creating
+Tell the SKILL your scene, for example:
+- "Generate Seedance 2.0 prompts for a train dining car scene with two characters"
+- "Create a 6-shot action sequence with a hero character"
 
-Tell the SKILL what you need:
-- "Create a 60-second sci-fi short film about an astronaut's day on a lunar base"
-- "Generate a 30-second romantic proposal scene"
-- "Make a 90-second action chase sequence"
+### 📏 Platform Constraints (Seedance 2.0)
 
-The SKILL will automatically:
-1. Calculate scene count (60sec ÷ 5sec = 12 scenes)
-2. Generate three-layer prompts for each scene
-3. Auto-select optimal shot types
-4. Configure camera movement, transitions, and BGM
+| Constraint | Value |
+|-----------|-------|
+| Shot duration | **4-15 seconds** (hard limit) |
+| Image references | Up to 9 |
+| Video references | Up to 3, total ≤15s |
+| Audio references | Up to 3, total ≤15s |
+| Total files | Up to 12 |
 
-### 🛠️ Supported Tools
+### 🛠️ Supported Platform
 
-**Image Generation**:
-- Midjourney v6
-- DALL-E 3
-- Stable Diffusion XL
-
-**Image-to-Video**:
-- Runway Gen-2/Gen-3
-- Pika Labs 1.5
-- Stability AI SVD
-
-### 💡 Examples
-
-Check the `examples/` directory for complete examples:
-- [Romantic Sunset Scene Storyboard](./examples/浪漫日落场景_分镜脚本_v2.md)
-
-### 🤝 Contributing
-
-Issues and Pull Requests are welcome!
+**AI Video Generation**: Seedance 2.0 / 即梦 2.0 (ByteDance)
 
 ### 📄 License
 
-This project is licensed under the [MIT License](./LICENSE)
-
-### 🙏 Acknowledgments
-
-- Built with [Claude Code](https://claude.ai/claude-code)
-- Thanks to all contributors
+[MIT License](./LICENSE)
 
 ---
 
 <div align="center">
 
-**Made with ❤️ by the community**
+**Built with ❤️ by Cyber Bayes**
 
 [Report Bug](https://github.com/JOZUJIOJIO/cinematic-prompts/issues) · [Request Feature](https://github.com/JOZUJIOJIO/cinematic-prompts/issues)
 

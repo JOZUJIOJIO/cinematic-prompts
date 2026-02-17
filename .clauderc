@@ -1,7 +1,7 @@
 {
   "skills": {
-    "cinematic-prompts": {
-      "path": "./skills/cinematic-prompts"
+    "seedance-cinematic-video": {
+      "path": "./skills/seedance-cinematic-video"
     }
   }
 }
